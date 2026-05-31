@@ -9,7 +9,7 @@
 
 #### Verification Environment
 ```
-    Project
+    Project_root
     │
     ├── doc
     │   └── xxxx
@@ -44,9 +44,26 @@
         │   └── my_case1.sv
         │        
         └── top
-            ├── tb_top.sv
             ├── rtl.f
-            └── tb.f
+            ├── tb.f
+            └── tb_top.sv
 ```
+
+#### Makefile excution note
+make comp 
+
+make all TESTNAME=basetest
+
+make sim TESTNAME=my_case0
+
+make sim TESTNAME=my_case1
+
+
+Dump FSDB:
+
+make sim TESTNAME=my_case0 DUMP_EN=1
+
+make sim TESTNAME=my_case1 DUMP_EN=1
+
 
 
