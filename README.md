@@ -22,18 +22,18 @@ my_case1: 使用seq.start()，手動啟動sqr
     │   └── dut.sv
     │
     ├── sim
-    │   ├── Makefile
-    │   └── runlist
+    │   └── Makefile
     │ 
     └── tb
         ├── env
         │   ├── agent.sv
+        │   ├── driver.sv        
         │   ├── env.sv
         │   ├── monitor.sv
         │   ├── ref_model.sv
         │   ├── scoreboard.sv
         │   ├── sequencer.sv
-        │   ├── sequencer.sv
+        │   ├── sequence.sv
         │   └── transaction.sv
         │ 
         ├── interface
@@ -44,23 +44,24 @@ my_case1: 使用seq.start()，手動啟動sqr
         │ 
         ├── testcase
         │   ├── base_test.sv
-        │   ├── my_case1.sv
+        │   ├── my_case0.sv
         │   └── my_case1.sv
         │        
         └── top
-            ├── tb_top.sv
             ├── rtl.f
-            └── tb.f
+            ├── tb.f
+            └── tb_top.sv
 ```
 
 ## Makefile excution
 make comp 
 
-make all TESTNAME=basetest
+make sim TESTNAME=basetest
 
 make sim TESTNAME=my_case0
 
 make sim TESTNAME=my_case1
+
 
 
 ## UVM testbench topology
@@ -112,4 +113,3 @@ uvm_test_top               base_test                   -     @462
       exp_port             uvm_blocking_get_port       -     @881 
 ------------------------------------------------------------------
 ```
-
