@@ -1,4 +1,4 @@
-# UVM_Example_Simple_UVM_Environment
+# UVM_Example_UVM_Environment
 
 ## Intro
 參考書籍 張強 《UVM实战》第二章，建立一個完整的UVM測試平台
